@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://mgp02mkor0at"]
+
+[ext_resource type="PackedScene" uid="uid://b2gxuv7f7py1v" path="res://mainChar.tscn" id="1_noarx"]
+[ext_resource type="Texture2D" uid="uid://dkefqswj12moj" path="res://material/textures/oak_veneer_01_diff_4k.jpg" id="2_jka67"]
+[ext_resource type="Texture2D" uid="uid://b8r7mfbtes6if" path="res://material/textures/oak_veneer_01_ao_4k.jpg" id="3_i5arm"]
+[ext_resource type="Texture2D" uid="uid://bgqnx5b6l6xb" path="res://material/textures/oak_veneer_01_disp_4k.png" id="4_wc5p8"]
+[ext_resource type="Texture2D" uid="uid://be6002h0kxloo" path="res://material/textures/oak_veneer_01_arm_2k.jpg" id="5_jsk3o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4xowi"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_wc5p8"]
+albedo_texture = ExtResource("2_jka67")
+orm_texture = ExtResource("5_jsk3o")
+normal_enabled = true
+normal_texture = ExtResource("4_wc5p8")
+detail_mask = ExtResource("2_jka67")
+detail_albedo = ExtResource("3_i5arm")
+detail_normal = ExtResource("4_wc5p8")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_noarx"]
+
+[sub_resource type="Sky" id="Sky_a202f"]
+sky_material = SubResource("ProceduralSkyMaterial_noarx")
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 2
+sky = SubResource("Sky_a202f")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_a0tk4"]
+
+[sub_resource type="Compositor" id="Compositor_r3fl7"]
+
+[node name="main" type="Node"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5876666, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71174145, 3.1235666, 0.4129107)
+shape = SubResource("BoxShape3D_4xowi")
+
+[node name="RigidBody3D2" parent="World/Area3D" instance=ExtResource("1_noarx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.787594, 0)
+yaw_sensitivity = 1.0
+pitch_sensitivity = 0.5
+max_pitch = 2.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World/Area3D"]
+process_priority = 1
+process_physics_priority = 1
+transform = Transform3D(17.025902, 0, 0, 0, 5.2294693, 0, 0, 0, 16.527151, -0.70331776, 1.9915593, 0.89775693)
+visibility_range_fade_mode = 1
+use_collision = true
+collision_layer = 255
+collision_mask = 255
+size = Vector3(2, 1, 2)
+material = SubResource("ORMMaterial3D_wc5p8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_noarx")
+camera_attributes = SubResource("CameraAttributesPhysical_a0tk4")
+compositor = SubResource("Compositor_r3fl7")

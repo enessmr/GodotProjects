@@ -1,0 +1,72 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="testing"
+run/main_scene="res://node_3d.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 0)
+config/icon="res://icon.svg"
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+
+[display]
+
+window/size/viewport_height=1080
+display_server/driver.windows="windows"
+display_server/driver.linuxbsd="wayland"
+display_server/driver.android="android"
+display_server/driver.ios="iOS"
+display_server/driver.visionos="visionOS"
+display_server/driver.macos="macos"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/virtual_joystick/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled.android=true
+import/blender/enabled.web=true
+
+[input]
+
+cam_left={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":74,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cam_right={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":76,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cam_up={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":73,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cam_down={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":75,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

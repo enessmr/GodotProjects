@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2gxuv7f7py1v"]
+
+[ext_resource type="Script" uid="uid://cltih8idfmxvd" path="res://main_char.gd" id="1_scdva"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="2_gnlrw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gmmqe"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4xowi"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a202f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_noarx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gnlrw"]
+
+[sub_resource type="Sky" id="Sky_jl3no"]
+sky_material = SubResource("ProceduralSkyMaterial_gnlrw")
+
+[sub_resource type="Environment" id="Environment_gmmqe"]
+background_mode = 2
+sky = SubResource("Sky_jl3no")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_scdva"]
+
+[sub_resource type="Compositor" id="Compositor_gnlrw"]
+
+[node name="RigidBody3D" type="RigidBody3D" node_paths=PackedStringArray("joystick_left", "joystick_right", "camera")]
+physics_material_override = SubResource("PhysicsMaterial_gmmqe")
+can_sleep = false
+script = ExtResource("1_scdva")
+joystick_left = NodePath("Node/Control/CanvasLayer/MovementJoystick")
+joystick_right = NodePath("Node/Control/CanvasLayer/CamJoystick")
+camera = NodePath("CSGMesh3D/Camera3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_4xowi")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+use_collision = true
+mesh = SubResource("CapsuleMesh_a202f")
+material = SubResource("StandardMaterial3D_noarx")
+
+[node name="Camera3D" type="Camera3D" parent="CSGMesh3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.46932426)
+environment = SubResource("Environment_gmmqe")
+attributes = SubResource("CameraAttributesPhysical_scdva")
+compositor = SubResource("Compositor_gnlrw")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Control" type="Control" parent="Node"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node/Control"]
+
+[node name="MovementJoystick" parent="Node/Control/CanvasLayer" instance=ExtResource("2_gnlrw")]
+offset_left = 100.0
+offset_top = -498.0
+offset_bottom = -298.0
+scale = Vector2(2, 2)
+joystick_mode = 1
+
+[node name="CamJoystick" parent="Node/Control/CanvasLayer" instance=ExtResource("2_gnlrw")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -502.0
+offset_top = -498.0
+offset_right = -302.0
+offset_bottom = -298.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+joystick_mode = 1
+use_input_actions = false
+action_left = "cam_left"
+action_right = "cam_right"
+action_up = "cam_up"
+action_down = "cam_down"
