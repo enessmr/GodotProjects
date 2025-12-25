@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=12 format=3 uid="uid://b2gxuv7f7py1v"]
 
 [ext_resource type="Script" uid="uid://cltih8idfmxvd" path="res://main_char.gd" id="1_scdva"]
@@ -51,11 +52,48 @@ compositor = SubResource("Compositor_gnlrw")
 [node name="Node" type="Node" parent="."]
 
 [node name="Control" type="Control" parent="Node"]
+=======
+[gd_scene load_steps=10 format=3 uid="uid://b2gxuv7f7py1v"]
+
+[ext_resource type="Script" uid="uid://cltih8idfmxvd" path="res://main_char.gd" id="1_scdva"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="2_gnlrw"]
+[ext_resource type="Texture2D" uid="uid://bbuu7s6qc13s4" path="res://texture/a_button_unpressed.svg" id="3_48qap"]
+[ext_resource type="Texture2D" uid="uid://1c12vnfs6dsx" path="res://texture/a_button_pressed.svg" id="4_u17qb"]
+[ext_resource type="PackedScene" uid="uid://dd0ggc7taiea3" path="res://addons/multi_touchscreenbutton/multi_touch_screen_button.scn" id="5_u17qb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gmmqe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gnlrw"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a202f"]
+lightmap_size_hint = Vector2i(17, 14)
+material = SubResource("StandardMaterial3D_gnlrw")
+add_uv2 = true
+radial_segments = 4
+rings = 0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gnlrw"]
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=330804618 node_paths=PackedStringArray("joystick_left", "joystick_right", "camera")]
+physics_material_override = SubResource("PhysicsMaterial_gmmqe")
+script = ExtResource("1_scdva")
+yaw_sensitivity = 1.0
+pitch_sensitivity = 10.0
+max_pitch = 100.0
+joystick_left = NodePath("Node/Control/CanvasLayer/MovementJoystick")
+joystick_right = NodePath("Node/Control/CanvasLayer/CamJoystick")
+camera = NodePath("PlayerMesh/Camera3D")
+
+[node name="Node" type="Node" parent="." unique_id=615871147]
+
+[node name="Control" type="Control" parent="Node" unique_id=1502861776]
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+<<<<<<< HEAD
 [node name="CanvasLayer" type="CanvasLayer" parent="Node/Control"]
 
 [node name="MovementJoystick" parent="Node/Control/CanvasLayer" instance=ExtResource("2_gnlrw")]
@@ -76,8 +114,66 @@ offset_bottom = -298.0
 grow_horizontal = 0
 scale = Vector2(2, 2)
 joystick_mode = 1
+=======
+[node name="CanvasLayer" type="CanvasLayer" parent="Node/Control" unique_id=1681555532]
+
+[node name="MovementJoystick" parent="Node/Control/CanvasLayer" unique_id=1225324758 instance=ExtResource("2_gnlrw")]
+offset_left = 62.0
+offset_top = -288.0
+offset_right = 212.0
+offset_bottom = -138.0
+scale = Vector2(1.5, 1.5)
+action_left = "player_left"
+action_right = "player_right"
+action_up = "player_up"
+action_down = "player_dovn"
+
+[node name="CamJoystick" parent="Node/Control/CanvasLayer" unique_id=1614220808 instance=ExtResource("2_gnlrw")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -285.0
+offset_top = -288.0
+offset_right = -135.0
+offset_bottom = -138.0
+grow_horizontal = 0
+scale = Vector2(1.5, 1.5)
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 use_input_actions = false
 action_left = "cam_left"
 action_right = "cam_right"
 action_up = "cam_up"
 action_down = "cam_down"
+<<<<<<< HEAD
+=======
+
+[node name="jumpbtn" parent="Node/Control/CanvasLayer" unique_id=900073749 instance=ExtResource("5_u17qb")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -292.0
+offset_top = -498.0
+offset_right = -55.0
+offset_bottom = -374.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3_48qap")
+texture_pressed = ExtResource("4_u17qb")
+texture_hover = ExtResource("4_u17qb")
+texture_disabled = ExtResource("3_48qap")
+texture_focused = ExtResource("4_u17qb")
+action = "player_a_btn"
+
+[node name="PlayerMesh" type="MeshInstance3D" parent="." unique_id=1678366828]
+mesh = SubResource("CapsuleMesh_a202f")
+
+[node name="Camera3D" type="Camera3D" parent="PlayerMesh" unique_id=171261362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.42527363)
+fov = 37.849285
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1758603457]
+visible = false
+shape = SubResource("CapsuleShape3D_gnlrw")
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)

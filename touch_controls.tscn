@@ -5,22 +5,39 @@
 [node name="TouchControls" type="CanvasLayer"]
 
 [node name="MovementJoystick" parent="." instance=ExtResource("1_1gcqp")]
+<<<<<<< HEAD
 offset_left = 100.0
 offset_top = -498.0
 offset_bottom = -298.0
 scale = Vector2(2, 2)
+=======
+offset_left = 62.0
+offset_top = -287.99994
+offset_right = 212.0
+offset_bottom = -137.99994
+scale = Vector2(1.5, 1.5)
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 joystick_mode = 1
 
 [node name="CamJoystick" parent="." instance=ExtResource("1_1gcqp")]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_right = 1.0
+<<<<<<< HEAD
 offset_left = -502.0
 offset_top = -498.0
 offset_right = -302.0
 offset_bottom = -298.0
 grow_horizontal = 0
 scale = Vector2(2, 2)
+=======
+offset_left = -285.0
+offset_top = -288.0
+offset_right = -135.0
+offset_bottom = -138.0
+grow_horizontal = 0
+scale = Vector2(1.5, 1.5)
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 joystick_mode = 1
 use_input_actions = false
 action_left = "cam_left"

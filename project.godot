@@ -8,10 +8,18 @@
 
 config_version=5
 
+<<<<<<< HEAD
+=======
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 [application]
 
 config/name="testing"
 run/main_scene="res://node_3d.tscn"
+<<<<<<< HEAD
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 0)
 config/icon="res://icon.svg"
@@ -22,12 +30,37 @@ boot_splash/use_filter=false
 [display]
 
 window/size/viewport_height=1080
+=======
+config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 0)
+config/icon="res://icon.svg"
+boot_splash/show_image=false
+boot_splash/stretch_mode=0
+boot_splash/use_filter=false
+
+[debug]
+
+settings/stdout/print_fps=true
+
+[display]
+
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 display_server/driver.windows="windows"
 display_server/driver.linuxbsd="wayland"
 display_server/driver.android="android"
 display_server/driver.ios="iOS"
 display_server/driver.visionos="visionOS"
 display_server/driver.macos="macos"
+<<<<<<< HEAD
+=======
+window/vsync/vsync_mode=0
+
+[editor]
+
+movie_writer/disable_vsync=true
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 
 [editor_plugins]
 
@@ -60,13 +93,75 @@ cam_down={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":75,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+<<<<<<< HEAD
+=======
+player_a_btn={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+player_left={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":65,"physical_keycode":0,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194319,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+player_right={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":68,"physical_keycode":0,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194321,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+player_up={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":87,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194320,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+player_dovn={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194322,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+start={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
 
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+<<<<<<< HEAD
 pointing/emulate_mouse_from_touch=false
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+=======
+
+[physics]
+
+common/physics_ticks_per_second=144
+
+[rendering]
+
+rendering_device/driver="opengl3"
+rendering_device/driver.windows="opengl3"
+rendering_device/driver.linuxbsd="opengl3"
+rendering_device/driver.android="opengl3"
+rendering_device/fallback_to_vulkan=false
+rendering_device/fallback_to_d3d12=false
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+anti_aliasing/screen_space_roughness_limiter/amount=0.01
+anti_aliasing/screen_space_roughness_limiter/limit=0.01
+rendering_device/driver.web="opengl3"
+environment/screen_space_reflection/roughness_quality=0
+>>>>>>> edc8855 (Dij bestie zbbxv x z 🗣️🤠😱✈️😟😟😂🙁🙁🎉🥵🤬💀‼️🥀🖕🔥🖕🤬🥵🥵🥀🥀💚🦕😭🔥💚💚😭💚🤯🗣️🎉❤️‍🩹❤️‍🩹😱🙁🙁🤓❤️‍🩹😖💀❤️‍🩹‼️🤬💔🐢😭😢❤️‍🔥😈🥎🥎🥎😢❤️‍🔥✈️🦕😢😈🖕🦕🤠🖕🔥🤓🗣️😱🙁🥵😱😭🔥🔥💚🗣️‼️‼️😭❤️‍🩹🤬💔💔💔😖‼️🤬😖😖)
